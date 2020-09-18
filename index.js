@@ -41,8 +41,11 @@ function multiply(a, b) {
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-
-
+let age = 30;
+  if (age > 0){
+    const dogYears = age * 7;
+    console.log(`You are ${dogYears} in dog years!`);
+  }
 
 
 /************************************************************** Task 3 **************************************************************/
@@ -58,7 +61,7 @@ function multiply(a, b) {
 
 // Puppies less than 1 year
 // 2 - 4 months 10% of their body weight
-// 4 - 7 months 5% of their body weight 
+// 4 - 7 months 5% of their body weight  
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
@@ -81,14 +84,17 @@ function multiply(a, b) {
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
+let kilometers = parseInt(prompt("Kilometers"))
+let miles = kilometers/1.60934;
+console.log(miles+"miles");
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  
 
-
+let Feet = parseInt (prompt("Feet"))
+let CM = Feet*30.48;
+console.log(CM+"centimeters");
 
 
 /************************************************************** Task 6 **************************************************************/
@@ -110,7 +116,23 @@ function multiply(a, b) {
 //and anything below 60 should be F
   
 
-  
+function gradeMe(percent) {
+    if (percent >= 90) {
+        return 'A';
+    }
+    if (percent >= 80) {
+        return 'B';
+    }
+    if (percent >= 70) {
+        return 'C';
+    }
+    if (percent >= 60) {
+        return 'D';
+    } else
+
+    return 'F';
+}
+console.log(gradeMe(2));
   
 
 /************************************************************** Stretch **************************************************************/
