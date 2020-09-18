@@ -50,7 +50,7 @@ let age = 30;
 
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
-//takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
+//takes weight in pounds  and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
 
 //feeding requirements
 // adult dogs at least 1 year 
@@ -77,7 +77,41 @@ let age = 30;
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+let user= prompt("rock, paper or scissors?");
+let ComputerBoss = Math.random();
+if (ComputerBoss < 0.34) {
+	ComputerBoss = "rock";
+} else if(ComputerBoss <= 0.67) {
+	ComputerBoss = "paper";
+} else {
+	ComputerBoss = "scissors";
+} console.log("ComputerBoss: " + ComputerBoss);
+
+let compare = function(result1,result2) {
+if (result1 === result2) {
+return "tie!";
+} else if (result1 === "rock") {
+        if (result2 === "scissors") {
+            return "rock wins";
+        } else {
+            return "paper wins";
+        }
+    } else if (result1 === "paper") {
+        if (result2 === "rock") {
+            return "paper wins";
+        } else {
+            return "scissors wins";
+        }
+    } else if (result1 === "scissors") {
+        if (result2 === "rock") {
+            return ("rock wins") ;
+        } else {
+            return ("scissors wins") ;
+        }
+    }
+};
+
+compare(user, ComputerBoss);
   
 
 /************************************************************** Task 5 **************************************************************/
