@@ -1,25 +1,39 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
-
+let Votingage = 25;
+    if (Votingage > 18) {
+        console.log(true);
+    }
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-
+let drivingAge = 14;
+    if (drivingAge > 16) {
+        console.log("You can drive legally");
+    }
+    else {
+        console.log("Still got some time before you can drive")
+    }
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
+Number("1999");
 
 
 
 //Task d: Write a function to multiply a*b 
 
 
+function multiply(a, b) {
+    const answer = a*b;
+    console.log(answer);
+  }
+  multiply(4,5)
 
 
 
@@ -27,13 +41,16 @@
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
-
-
+let age = 30;
+  if (age > 0){
+    const dogYears = age * 7;
+    console.log(`You are ${dogYears} in dog years!`);
+  }
 
 
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder 
-//takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
+//takes weight in pounds  and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
 
 //feeding requirements
 // adult dogs at least 1 year 
@@ -44,7 +61,7 @@
 
 // Puppies less than 1 year
 // 2 - 4 months 10% of their body weight
-// 4 - 7 months 5% of their body weight 
+// 4 - 7 months 5% of their body weight  
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
@@ -60,29 +77,76 @@
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+  let user= prompt("rock, paper or scissors?");
+let ComputerBoss = Math.random();
+if (ComputerBoss < 0.34) {
+	ComputerBoss = "rock";
+} else if(ComputerBoss <= 0.67) {
+	ComputerBoss = "paper";
+} else {
+	ComputerBoss = "scissors";
+} console.log("ComputerBoss: " + ComputerBoss);
+
+let compare = function(result1,result2) {
+if (result1 === result2) {
+return "tie!";
+} else if (result1 === "rock") {
+        if (result2 === "scissors") {
+            return "rock wins";
+        } else {
+            return "paper wins";
+        }
+    } else if (result1 === "paper") {
+        if (result2 === "rock") {
+            return "paper wins";
+        } else {
+            return "scissors wins";
+        }
+    } else if (result1 === "scissors") {
+        if (result2 === "rock") {
+            return ("rock wins") ;
+        } else {
+            return ("scissors wins") ;
+        }
+    }
+};
+
+compare(user, ComputerBoss);
   
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
+let kilometers = parseInt(prompt("Kilometers"))
+let miles = kilometers/1.60934;
+console.log(miles+"miles");
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  
 
-
+let Feet = parseInt (prompt("Feet"))
+let CM = Feet*30.48;
+console.log(CM+"centimeters");
 
 
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
 
+function annoyingSong() {
+    let number = 99;
+    while (number > 0) {
+      console.log(number + "bottles of soda on the wall,") + number + "bottles of soda,";
+      number--;
+      console.log("take one down, pass it around," + number + "bottles of soda on the wall.");
+    }
+    console.log(number + " bottles of soda on the wall, " + number + " bottles of soda.");
+  }
+
+  annoyingSong();
 
 
 
@@ -96,7 +160,23 @@
 //and anything below 60 should be F
   
 
-  
+function gradeMe(percent) {
+    if (percent >= 90) {
+        return 'A';
+    }
+    if (percent >= 80) {
+        return 'B';
+    }
+    if (percent >= 70) {
+        return 'C';
+    }
+    if (percent >= 60) {
+        return 'D';
+    } else
+
+    return 'F';
+}
+console.log(gradeMe(2));
   
 
 /************************************************************** Stretch **************************************************************/
