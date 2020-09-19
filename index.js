@@ -77,7 +77,7 @@ let age = 30;
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-let user= prompt("rock, paper or scissors?");
+  let user= prompt("rock, paper or scissors?");
 let ComputerBoss = Math.random();
 if (ComputerBoss < 0.34) {
 	ComputerBoss = "rock";
@@ -135,8 +135,18 @@ console.log(CM+"centimeters");
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
 
+function annoyingSong() {
+    let number = 99;
+    while (number > 0) {
+      console.log(number + "bottles of soda on the wall,") + number + "bottles of soda,";
+      number--;
+      console.log("take one down, pass it around," + number + "bottles of soda on the wall.");
+    }
+    console.log(number + " bottles of soda on the wall, " + number + " bottles of soda.");
+  }
+
+  annoyingSong();
 
 
 
